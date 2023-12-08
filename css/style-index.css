@@ -71,6 +71,7 @@
     letter-spacing: 0.5px;
     text-transform: uppercase;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 .container form {
@@ -201,10 +202,6 @@ footer {
         max-width: 100%;
         min-height: 480px;
     }
-
-    .container button {
-        margin-top: 10px;
-     }
 
     .container form {
         background-color: #fff;
