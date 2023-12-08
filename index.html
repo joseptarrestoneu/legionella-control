@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="css/style-index.css">
 </head>
 <body>
-    <div class='body' data-theme='dark'>
-        <div class='container'>
-            <div class='formContainer' id='signUp'>
-                <form onSubmit={handleSubmitLogin}>
+    <div class='bodyLogin' data-theme='dark'>
+        <div class='containerLogin'>
+            <div class='formContainer' id='formContainer'>
+                <div class="formLogin">
                     <h1>Sign In</h1>
                     <div class='socialIcons'>
                         <a href="#" class='icon'><i class="fa-brands fa-windows"></i></a>
@@ -23,11 +23,11 @@
                         <a href="#" class='icon'><i class="fa-solid fa-envelope"></i></a>
                     </div>
                     <span>Utilitza el teu email com a email password</span>
-                    <input type='email' placeholder='Email'></input>
-                    <input type='password' placeholder='Password'></input>
-                    <Link to="/calendarlist" element=""><button type='submit'>Sign In</button></Link>
+                    <input class='email' type='email' placeholder='Email'></input>
+                    <input class='password' type='password' placeholder='Password'></input>
+                    <button type='submit'>Sign In</button>
                     <a href="#">Has oblidat el Password?</a>
-                </form>
+                </div>
             </div>
             <div class='toggleContainer'>
                 <div class='toggle'>
@@ -43,9 +43,9 @@
             </div>
         </div>
         <footer class="footer">
-            <a href="https://joseptarrestoneu.es"><span>Made with <span>&#9829;</span> by Josep Tarrés Toneu &copy 2023</span></a>
+            <a href="https://joseptarrestoneu.es"><span>Made by Josep Tarrés Toneu &copy 2023</span></a>
         </footer>
     </div>
 </body>
-<script src="js/app.js"></script>
+<script type="module" src="js/app.js"></script>
 </html>
