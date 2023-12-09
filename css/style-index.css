@@ -175,14 +175,14 @@ footer {
     position: fixed;
     font-size: 0.625em;
     z-index: 3;
-  }
+}
   
-  footer a {
+footer a {
     color: #c0c0c0;
     text-decoration: none;
     display: flex;
     align-items: center;
-  }
+}
 
 /* Pantalles desactivades */
 .disable {

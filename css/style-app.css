@@ -1,3 +1,4 @@
+
 :root{
     font-size: .785;
     font-family: 'Raleway', sans-serif;
@@ -26,7 +27,136 @@
 
 body {
     width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Menu header */
+@keyframes checked-anim {
+    100% {
+        width: 230px;
+    }
+}
+
+@keyframes not-checked-anim {
+    0% {
+        width: 230px;
+    }
+}
+
+li {
+    margin: 75px 0 -55px 0;
+    color: white;
+    font-size: 1em;
+    list-style: none;
+    text-decoration: none;
+    text-transform: none;
+    outline: 0;
+    display: none;
+    width: 230px;
+    text-indent: 60px;
+    cursor: pointer;
+}
+
+#trigger, #burger, #burger:before, #burger:after {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    background: white;
+    width: 30px;
+    height: 3px;
+    transition: .2s ease;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#trigger {
+    height: 25px;
+    background: none;
+}
+
+#burger:before {
+    content: " ";
+    top: 10px;
+    left: 0;
+}
+
+#burger:after {
+    content: " ";
+    top: 20px;
+    left: 0;
+}
+
+#menu-toggle:checked + #trigger + #burger {
+    top: 35px;
+    transform: rotate(180deg);
+    transition: transform .2s ease;
+}
+
+#menu-toggle:checked + #trigger + #burger:before {
+    width: 20px;
+    top: -2px;
+    left: 18px;
+    transform: rotate(45deg) translateX(-5px);
+    transition: transform .2s ease;
+}
+
+#menu-toggle:checked + #trigger + #burger:after {
+    width: 20px;
+    top: 2px;
+    left: 18px;
+    transform: rotate(-45deg) translateX(-5px);
+    transition: transform .2s ease;
+}
+
+#menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0; 
+    padding: 0;
+    width: 70px;
+    height: 100vh;
     background-color: #282828;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+    animation: not-checked-anim 1s both;
+}
+
+#menu-toggle:checked + #trigger + #burger + #menu {
+    animation: checked-anim 1s ease both;
+}
+
+#menu-toggle:checked + #trigger ~ #menu > li, a {
+    display: block;
+}
+
+[type="checkbox"]:not(:checked), 
+[type="checkbox"]:checked {
+    display: none;
+}
+
+/* Footer */
+.app .footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    font-size: 0.625em;
+    z-index: 3;
+}
+  
+.app .footer a {
+    color: #c0c0c0;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 
 /* Pantalles desactivades */
