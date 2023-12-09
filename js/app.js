@@ -24,5 +24,4 @@ window.addEventListener("load", () => {
             .then(response => response.json())
             .then((json) => json );
     }
-
 });
