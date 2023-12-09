@@ -1,4 +1,4 @@
 # Legionella Control ERP - Software for Legionella Control
-![project Banner](https://github.com/joseptarrestoneu/legionella-control/issues/1#issue-2033762562)
+![legionella2](https://github.com/joseptarrestoneu/legionella-control/assets/116755784/0ee6f4a0-9377-4959-9ebf-5a30b9d844c3)
 
 
