@@ -9,6 +9,8 @@ window.addEventListener("load", () => {
                 users.forEach(element => {
                     if (element.userUser === user && element.userPassword === password) {
                         window.location.href='app.html';
+                        console.log("Hola");
+                        
                     }
                 })
             })
@@ -17,8 +19,8 @@ window.addEventListener("load", () => {
     
     // Service User
     const getUser = () => {
-        return fetch('http://localhost:3001/api/users')
-        // return fetch('https://tasklist-backend-dtk7.onrender.com/api/users')
+        // return fetch('http://localhost:3001/api/users')
+        return fetch('https://legionella-control-backend.onrender.com/api/users')
             .then(response => response.json())
             .then((json) => json );
     }
