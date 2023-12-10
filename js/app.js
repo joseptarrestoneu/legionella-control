@@ -8,7 +8,6 @@ window.addEventListener("load", () => {
     let menu = document.querySelector("#menu")
 
     // Activar desactivar pantallas en funcion de la resolucion
-    
     if (screen.width <= 576) {
         entryWindow.classList.remove("disable")
         config.classList.add("disable")
