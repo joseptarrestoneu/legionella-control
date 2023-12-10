@@ -5,6 +5,25 @@ window.addEventListener("load", () => {
     let config = document.querySelector(".config-app")
     let units = document.querySelector(".list-units")
     let elements = document.querySelector(".list-elements")
+    let menu = document.querySelector("#menu")
+
+    // Activar desactivar pantallas en funcion de la resolucion
+    
+    if (screen.width <= 576) {
+        entryWindow.classList.remove("disable")
+        config.classList.add("disable")
+        units.classList.add("disable")
+        elements.classList.add("disable")
+        menu.firstElementChild.style.display = "none"
+        menu.firstElementChild.nextElementSibling.style.display = "none"
+        menu.firstElementChild.nextElementSibling.nextElementSibling.style.display = "none"
+    }
+    if (screen.width > 576) {
+        menu.firstElementChild.style.display = "block"
+        menu.firstElementChild.nextElementSibling.style.display = "block"
+        menu.firstElementChild.nextElementSibling.nextElementSibling.style.display = "block"
+    }
+    
 
     // Crear pantalles dinàmicament
     // 1) Pantalla de Llista d'Elements:
